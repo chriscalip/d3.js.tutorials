@@ -1,13 +1,13 @@
 # A tutorial series covering the Javascript library D3.
 
-## Github codebase provided by chriscalip.
-## Based on youtube series provided by d3Vienno.
-## Codebase located at : https://github.com/chriscalip/d3.js.tutorials
-## Youtube user account link: http://www.youtube.com/user/d3Vienno
-## Youtube playlist located at :   http://www.youtube.com/playlist?list=PL6il2r9i3BqH9PmbOf5wA5E1wOG3FT22p
-## See index.html.
+*Github codebase provided by chriscalip.*
+*Based on youtube series provided by d3Vienno.*
+*Codebase located at : https://github.com/chriscalip/d3.js.tutorials *
+*Youtube user account link: http://www.youtube.com/user/d3Vienno *
+*Youtube playlist located at :   http://www.youtube.com/playlist?list=PL6il2r9i3BqH9PmbOf5wA5E1wOG3FT22p *
+*See index.html.*
 
-**Javascript library D3 Tutorial Series:**
+## Javascript library D3 Tutorial Series:**
 
 1. Introduction
 Part 1 of a series of tutorials on the Javascript library D3.
