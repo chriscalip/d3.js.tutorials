@@ -7,7 +7,7 @@
 *Youtube playlist located at :   http://www.youtube.com/playlist?list=PL6il2r9i3BqH9PmbOf5wA5E1wOG3FT22p *
 *See index.html.*
 
-## Javascript library D3 Tutorial Series:**
+## Javascript library D3 Tutorial Series:
 
 1. Introduction
 Part 1 of a series of tutorials on the Javascript library D3.
