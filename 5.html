@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+  <title>D3 tutorial</title>
+  <script src="d3.v3.min.js"></script>
+  <script src="https://google-code-prettify.googlecode.com/svn/loader/prettify.js"></script>
+  <link href="https://google-code-prettify.googlecode.com/svn/loader/prettify.css" type="text/css" rel="stylesheet" />
+</head>
+<h3>Scales</h3>
+<a href="index.html">Back to table of contents</a>
+<body onload="prettyPrint()">
+<pre class="prettyprint">
+    var dataArray = [20, 40, 50, 600];
+    var canvas = d3.select("body")
+                  .append("svg")
+                  .attr("width", 500)
+                  .attr("height", 500);
+    /*
+      Notice that the width of each bar is the value of each element of the dataArray multiplied by 10.
+      so:
+      1st bar is 200
+      2nd bar is 400
+      3rd bar is 500
+      4th bar is 6000
+      But the canvas has a maximum width of only 500! Now it looks like 3rd bar and 4th bar is the same value.
+      For the solution to this trouble go to part 2!
+     */
+    var bars = canvas.selectAll("rect")
+                  .data(dataArray)
+                  .enter()
+                  .append("rect")
+                  .attr("width", function(d){ return d * 10; } )
+                  .attr("height", 50)
+                  .attr("y", function(d, i){ return i * 100; } );
+</pre>
+  <script>
+    var dataArray = [20, 40, 50, 600];
+    var canvas = d3.select("body")
+                  .append("svg")
+                  .attr("width", 500)
+                  .attr("height", 500);
+    var bars = canvas.selectAll("rect")
+                  .data(dataArray)
+                  .enter()
+                  .append("rect")
+                  .attr("width", function(d){ return d * 10; } )
+                  .attr("height", 50)
+                  .attr("y", function(d, i){ return i * 100; } );
+  </script>
+</body>
+</html>
