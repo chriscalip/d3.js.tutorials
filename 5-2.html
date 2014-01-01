@@ -43,6 +43,15 @@
                   .append("svg")
                   .attr("width", width)
                   .attr("height", height);
+    /*
+      Notice that the width of each bar is the value of each element of the dataArray applied to widthScale
+      so:
+      1st bar is widthScale(5) which is 41.6
+      2nd bar is widthScale(20) which is 166.6
+      3rd bar is widthScale(40) which is 333.3
+      4th bar is widthScale(50) which is 416.6
+      last bar is widthScale(60) which is 500
+     */
     var bars = canvas.selectAll("rect")
                   .data(dataArray)
                   .enter()
