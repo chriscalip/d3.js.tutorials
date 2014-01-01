@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+  <title>D3 tutorial</title>
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+  <link href="prettify.css" type="text/css" rel="stylesheet" />
+</head>
+<p>Select and Append, part2</p>
+<a href="index.html">..back</a>
+<body onload="prettyPrint()">
+<pre class="prettyprint">
+  // adds non-existent p element to dom body and then add text to p element.
+  // example of method chaining.
+  d3.select("body").append("p").text("Hi, What's up?");
+</pre>
+  <script>
+    // adds text on non-existent p element.
+    d3.select("body").append("p").text("Hi, What's up?");
+  </script>
+</body>
+</html>
