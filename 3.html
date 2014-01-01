@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+  <title>D3 tutorial</title>
+  <script src="d3.v3.min.js"></script>
+  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+  <link href="https://google-code-prettify.googlecode.com/svn/loader/prettify.css" type="text/css" rel="stylesheet" />
+</head>
+<h3>Basic SVG shapes</h3>
+<a href="index.html">..back</a>
+<body>
+<pre class="prettyprint">
+    // append svg object to the dom body and assign to variable canvas
+    var canvas = d3.select("body")
+                  .append("svg")
+                  // specify width and height
+                  .attr("width", 500)
+                  .attr("height", 500);
+    // create a circle and assign attributes.
+    var circle = canvas.append("circle")
+                  .attr("cx", 250)
+                  .attr("cy", 250)
+                  .attr("r", 50)
+                  .attr("fill", "red");
+    // create a rectangle and assign attributes.
+    var rect = canvas.append("rect")
+                  .attr("width", 250)
+                  .attr("height", 250);
+    // create a line and assign attributes.
+    var line = canvas.append("line")
+                  // x1 first horizontal position of the line
+                  .attr("x1", 0)
+                  // y1 first vertical position of the line
+                  .attr("y1", 100)
+                  // second point where the line goes to
+                  .attr("x2", 400)
+                  .attr("y2", 400)
+                  .attr("stroke", "green")
+                  .attr("stroke-width", 10);
+</pre>
+  <script>
+    var canvas = d3.select("body")
+                  .append("svg")
+                  .attr("width", 500)
+                  .attr("height", 500);
+    var circle = canvas.append("circle")
+                  .attr("cx", 250)
+                  .attr("cy", 250)
+                  .attr("r", 50)
+                  .attr("fill", "red");
+    var rect = canvas.append("rect")
+                  .attr("width", 250)
+                  .attr("height", 250);
+    var line = canvas.append("line")
+                  .attr("x1", 0)
+                  .attr("y1", 100)
+                  .attr("x2", 400)
+                  .attr("y2", 400)
+                  .attr("stroke", "green")
+                  .attr("stroke-width", 10);
+  </script>
+</body>
+</html>
