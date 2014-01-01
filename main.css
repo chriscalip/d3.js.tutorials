@@ -20,6 +20,10 @@ body {
 	text-align: left;
 }
 
+#disabled {
+	color: #C0C0C0;
+}
+
 /* Font styles */
 h1 {
 	font-size: 18px;
