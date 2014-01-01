@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+  <title>D3 tutorial</title>
+  <script src="d3.v3.min.js"></script>
+  <script src="https://google-code-prettify.googlecode.com/svn/loader/prettify.js"></script>
+  <link href="https://google-code-prettify.googlecode.com/svn/loader/prettify.css" type="text/css" rel="stylesheet" />
+</head>
+<h3>Visualizing data</h3>
+<a href="index.html">Back to table of contents</a>
+<body onload="prettyPrint()">
+<pre class="prettyprint">
+    var dataArray = [20, 40, 50];
+    var canvas = d3.select("body")
+                  .append("svg")
+                  .attr("width", 500)
+                  .attr("height", 500);
+    /*
+      Select all elements that match criteria "rectangle". In this case we don't
+      have any rectangle yet, so it returns an empty selection with svg properties
+      that can be bind/connected to data through data method.
+     */
+    var bars = canvas.selectAll("rect")
+                  // specify where the input is coming from..
+                  .data(dataArray)
+                  // if necessary creates the data bound elements.
+                  .enter()
+                    // for each created data-bound element append a rectangle
+                    .append("rect")
+                    // attribute width will be based on the function of the data
+                    // @link : http://stackoverflow.com/questions/18655275/javascript-closures-function-parameters
+                    // input parameter d is the data element coming from dataArray.
+                    .attr("width", function(d){ return d * 10; } )
+                    .attr("height", 50)
+                    // attribute y wil be based on the function of the data
+                    // note that the data is dataArray = [20, 40, 50]
+                    // input parameter i corresponds to the index of element.
+                    // ie..  i = 1 for value 20, 2nd value is 40 (i=2), 3rd value is 50 (i=3)
+                    .attr("y", function(d, i){ return i * 100; } );
+</pre>
+  <script>
+    var dataArray = [20, 40, 50];
+    var canvas = d3.select("body")
+                  .append("svg")
+                  .attr("width", 500)
+                  .attr("height", 500);
+    var bars = canvas.selectAll("rect")
+                  // specify where the input is coming from..
+                  .data(dataArray)
+                  // if necessary creates the data bound elements.
+                  .enter()
+                  .append("rect")
+                  .attr("width", function(d){ return d * 10; } )
+                  .attr("height", 50)
+                  .attr("y", function(d, i){return i * 100 } );
+  </script>
+</body>
+</html>
