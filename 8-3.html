@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+  <title>D3 tutorial</title>
+  <!--[if lte IE 8]><script src="r2d3.min.js" charset="utf-8"></script><![endif]-->
+  <!--[if gte IE 9]><!-->
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <!--<![endif]-->
+  <script src="https://google-code-prettify.googlecode.com/svn/loader/prettify.js"></script>
+  <link href="https://google-code-prettify.googlecode.com/svn/loader/prettify.css" type="text/css" rel="stylesheet" />
+</head>
+<h3>Transitions</h3>
+<h4>Basic Animations in D3, part3</h4>
+<a href="index.html">Back to table of contents</a>
+<body onload="prettyPrint()">
+<pre class="prettyprint">
+    /**
+     * Script draws circle, 2 seconds after drawing the circle, move the circle to the right.
+     * set the time moving to the right for about 1.5 secs.
+     * Additional this script showcases event listener "each" function
+     * At the start of the moving animation color the circle green.
+     * At the end of the moving animation color the circle red.
+     */
+    var width = 500;
+    var height = 500;
+    var canvas = d3.select("body")
+                  .append("svg")
+                  .attr("width", width)
+                  .attr("height", height);
+    var circle = canvas.append("circle")
+                  .attr("cx", 50)
+                  .attr("cy", 50)
+                  .attr("r", 25);
+    // on circle object render
+    circle.transition()
+      // move circle to the right
+      .attr("cx", 150)
+      // set the length of time moving to 1.5 secs (1500 milliseconds)
+      .duration(1500)
+      // but start the transition 2 seconds after object render
+      .delay(2000)
+      // At the start of the moving animation color the circle green.
+      .each("start", function() { d3.select(this).attr("fill", "green") } )
+      // At the end of the moving animation color the circle red.
+      .each("end", function() { d3.select(this).attr("fill", "red") } );
+</pre>
+  <script>
+    var width = 500;
+    var height = 500;
+    var canvas = d3.select("body")
+                  .append("svg")
+                  .attr("width", width)
+                  .attr("height", height);
+    var circle = canvas.append("circle")
+                  .attr("cx", 50)
+                  .attr("cy", 50)
+                  .attr("r", 25);
+    circle
+      .transition()
+      .attr("cx", 150)
+      .duration(1500)
+      .delay(2000)
+      .each("start", function() { d3.select(this).attr("fill", "green") } )
+      .each("end", function() { d3.select(this).attr("fill", "red") } );
+  </script>
+</body>
+</html>
