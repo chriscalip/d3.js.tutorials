@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+  <title>D3 tutorial</title>
+  <!--[if lte IE 8]><script src="r2d3.min.js" charset="utf-8"></script><![endif]-->
+  <!--[if gte IE 9]><!-->
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <!--<![endif]-->
+  <script src="https://google-code-prettify.googlecode.com/svn/loader/prettify.js"></script>
+  <link href="https://google-code-prettify.googlecode.com/svn/loader/prettify.css" type="text/css" rel="stylesheet" />
+</head>
+<h3>Working With Arrays</h3>
+<h4>Showcases d3 utility array functions</h4>
+<p> Api Reference @link https://github.com/mbostock/d3/wiki/Arrays </p>
+<a href="index.html">Back to table of contents</a>
+<body onload="prettyPrint()">
+<pre class="prettyprint">
+  // To See Output Requires google chrome or firefox (with firebug plugin)
+  // debug variable in console through console.log
+  // see link: http://stackoverflow.com/questions/4743730/what-is-console-log-and-how-do-i-use-it
+  var data = [10, 20, 30, 40, 50];
+  // gets first element returns value : 10, additionally alters data array and removes first element 10.
+  data.shift();
+  // let's reintialize the data array back to its original state.
+  var data = [10, 20, 30, 40, 50];
+  // returns an array that is sorted descending (output): [50, 40, 30, 20, 10]
+  data.sort(d3.descending);
+  // Returns the minimum value in the given array (output): 10
+  d3.min(data);
+  // Returns the maximum value in the given array (output): 50
+  d3.max(data);
+  // Returns the minimum and maximum value in the given array (output) : [10, 50]
+  d3.extent(data);
+  // Returns the sum of the given array. (output) : 150
+  d3.sum(data);
+  // Returns the mean of the given array. (output) : 30
+  d3.mean(data);
+  // Returns the median of the given array. (output) : 30
+  d3.median(data);
+  // Randomizes the order of the specified array
+  d3.shuffle(data);
+</pre>
+  <script>
+    var data = [10, 20, 30, 40, 50];
+    console.log(data);
+    console.log(data.shift());
+    var data = [10, 20, 30, 40, 50];
+    console.log(data.sort(d3.descending));
+    console.log(d3.min(data));
+    console.log(d3.max(data));
+    console.log(d3.extent(data));
+    console.log(d3.sum(data));
+    console.log(d3.mean(data));
+    console.log(d3.median(data));
+    console.log(d3.shuffle(data));
+  </script>
+</body>
+</html>
