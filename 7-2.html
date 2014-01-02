@@ -26,14 +26,14 @@
     // at this point there's one circle created already
     var circle = canvas.selectAll("circle")
                   .data(data)
-                  // any existing circles selected would be colored green.
+                  // update any existing circles selected and color those green.
                   .attr("fill", "green")
                   .enter()
                     .append("circle")
                     .attr("cx", 50)
                     .attr("cy", 50)
                     .attr("r", 25)
-                    // any data-bound created circles would be colored red.
+                    // any data-bound created circles color those to red.
                     .attr("fill", "red");
 </pre>
   <script>
